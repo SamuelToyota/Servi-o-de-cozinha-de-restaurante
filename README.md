@@ -1,3 +1,5 @@
+<img width="1898" height="911" alt="image" src="https://github.com/user-attachments/assets/74b2482a-39e4-4be8-8b82-be742f8b5a39" />
+
 # 🍽️ Serviço de Cozinha de Restaurante
 
 Um sistema de gerenciamento para cozinhas profissionais.  
@@ -113,4 +115,5 @@ Representa os ingredientes disponíveis.
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/servico_de_cozinha_de_restaurante.git
+
    cd servico_de_cozinha_de_restaurante
