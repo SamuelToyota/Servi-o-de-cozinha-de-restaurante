@@ -1,0 +1,22 @@
+{% extends "menu/base.html" %}
+{% block title %}Lista de Pratos{% endblock %}
+{% block content %}
+<h1 class="mb-4">Lista de Pratos</h1>
+
+<a href="{% url 'menu:dish_create' %}" class="btn btn-primary mb-3">+ Novo Prato</a>
+
+<div class="row">
+  {% for dish in object_list %}
+  <div class="col-md-4 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{ dish.name }}</h5>
+        <p class="card-text">{{ dish.description|truncatewords:20 }}</p>
+        <p><strong>Tipo:</strong> {{ dish.dish_type.name }}</p>
+        <a href="{{ dish.get_absolute_url }}" class="btn btn-outline-dark">Ver detalhes</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
