@@ -74,8 +74,8 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=100)),
                 ('description', models.TextField(blank=True)),
                 ('cook', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='dishes', to=settings.AUTH_USER_MODEL)),
-                ('dish_type', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='cozinha.dishtype')),
-                ('ingredients', models.ManyToManyField(blank=True, to='cozinha.ingredient')),
+                ('dish_type', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='kitchen.dishtype')),
+                ('ingredients', models.ManyToManyField(blank=True, to='kitchen.ingredient')),
             ],
             options={
                 'verbose_name': 'Prato',
