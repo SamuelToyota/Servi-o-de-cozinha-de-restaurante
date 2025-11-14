@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Lista de Cozinheiros</h1>
+
+<ul>
+    {% for cook in cook_list %}
+        <li>
+            <a href="{% url 'kitchen:cook-detail' cook.id %}">
+                {{ cook.first_name }} {{ cook.last_name }} — {{ cook.years_of_experience }} anos de experiência
+            </a>
+        </li>
+    {% empty %}
+        <p>Nenhum cozinheiro cadastrado.</p>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'kitchen:cook-create' %}">➕ Adicionar cozinheiro</a>
+{% endblock %}

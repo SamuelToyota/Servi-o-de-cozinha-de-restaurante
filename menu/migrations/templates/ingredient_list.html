@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Ingredientes</h1>
+
+<ul>
+    {% for ingredient in ingredient_list %}
+        <li>{{ ingredient.name }}</li>
+    {% empty %}
+        <p>Nenhum ingrediente cadastrado.</p>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'kitchen:ingredient-create' %}">➕ Adicionar ingrediente</a>
+{% endblock %}

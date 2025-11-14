@@ -99,8 +99,8 @@ USE_I18N = True
 USE_TZ = True
 
 # Configuração de arquivos estáticos (CSS, JS, imagens)
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_URL = 'menu_kitchen/'
+STATICFILES_DIRS = [BASE_DIR / 'menu_kitchen']
 
 # Arquivos enviados por usuários (ex: fotos de pratos)
 MEDIA_URL = '/media/'
